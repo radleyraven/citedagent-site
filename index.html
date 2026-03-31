@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cited — AI Visibility for Real Estate Agents | Get Cited by ChatGPT, Claude & Gemini</title>
+  <meta name="description" content="Find out what AI says about you. Cited audits your AI visibility and optimizes your profiles so ChatGPT, Claude, and Perplexity recommend you to buyers.">
+  <meta property="og:title" content="Cited — AI Visibility for Real Estate Agents">
+  <meta property="og:description" content="When buyers ask AI who to hire — does your name come up? Cited fixes your AI visibility.">
+  <meta property="og:url" content="https://citedagent.com">
+  <link rel="canonical" href="https://citedagent.com">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Cited",
+    "description": "AI visibility audit and optimization service for real estate professionals",
+    "url": "https://citedagent.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Radley Raven",
+      "jobTitle": "Luxury Real Estate Agent",
+      "worksFor": { "@type": "Organization", "name": "The Oppenheim Group" }
+    },
+    "areaServed": "United States",
+    "serviceType": "AI Visibility Optimization"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long until I see results?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Directory fixes are typically reflected in AI outputs within 2-6 weeks. Discovery visibility takes 8-12 weeks with consistent optimization." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this work for other professionals besides real estate agents?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — attorneys, doctors, and financial advisors are verticals we're expanding into. Real estate agents are our launch focus." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this SEO?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. SEO optimizes for Google search. Cited optimizes for AI model recommendations — a different data layer that increasingly influences how buyers find professionals." }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Cited different from a marketing agency?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We specialize in AI visibility specifically. Most marketing agencies are still optimizing for 2020 buyer behavior. We optimize for where buyers are going." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0D1B2A;
+      --navy-mid: #1A2E45;
+      --gold: #C9A84C;
+      --gold-light: #E8C96F;
+      --white: #FFFFFF;
+      --grey-light: #C8D6DF;
+      --grey-text: #6B7A8D;
+      --body-text: #2C3E50;
+      --bg-light: #F7F9FB;
+      --accent-green: #2ECC71;
+      --accent-blue: #3B82F6;
+      --section-gap: 96px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--body-text);
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,27,42,0.96);
+      backdrop-filter: blur(8px);
+      padding: 0 32px;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 22px; font-weight: 700; color: var(--white);
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: var(--navy);
+      padding: 10px 22px; border-radius: 6px;
+      font-weight: 600; font-size: 14px; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* SECTIONS */
+    section { padding: var(--section-gap) 24px; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px;
+    }
+    h1 { font-size: clamp(36px, 6vw, 60px); font-weight: 800; line-height: 1.1; }
+    h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.2; }
+    h3 { font-size: 20px; font-weight: 600; }
+    p { line-height: 1.75; }
+
+    /* HERO */
+    #hero {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: var(--white);
+      padding-top: calc(var(--section-gap) + 64px);
+      padding-bottom: var(--section-gap);
+      text-align: center;
+    }
+    #hero h1 { color: var(--white); margin-bottom: 24px; }
+    #hero .sub {
+      font-size: 20px; color: var(--grey-light);
+      max-width: 600px; margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      padding: 16px 32px; border-radius: 8px;
+      font-weight: 700; font-size: 16px; text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent; color: var(--white);
+      padding: 16px 32px; border-radius: 8px;
+      font-weight: 600; font-size: 16px; text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: border-color 0.2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--white); }
+
+    /* PROBLEM */
+    #problem { background: var(--white); }
+    #problem h2 { margin-bottom: 24px; }
+    #problem p { color: var(--grey-text); font-size: 18px; max-width: 720px; margin-bottom: 20px; }
+    .stat-callout {
+      background: var(--bg-light); border-left: 4px solid var(--gold);
+      padding: 20px 24px; border-radius: 0 8px 8px 0;
+      font-size: 17px; font-style: italic; color: var(--body-text);
+      max-width: 680px; margin-top: 32px;
+    }
+
+    /* WHAT CITED IS */
+    #what { background: var(--bg-light); }
+    #what h2 { margin-bottom: 48px; text-align: center; }
+    .three-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+    .card {
+      background: var(--white); border-radius: 12px;
+      padding: 36px 28px;
+      box-shadow: 0 2px 16px rgba(13,27,42,0.06);
+    }
+    .card-icon { font-size: 32px; margin-bottom: 16px; }
+    .card h3 { margin-bottom: 12px; color: var(--navy); }
+    .card p { color: var(--grey-text); font-size: 15px; line-height: 1.7; }
+
+    /* HOW IT WORKS */
+    #how { background: var(--white); }
+    #how h2 { text-align: center; margin-bottom: 56px; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
+    .step { text-align: center; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      font-size: 22px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .step h3 { margin-bottom: 10px; }
+    .step p { color: var(--grey-text); font-size: 15px; }
+
+    /* SAMPLE AUDIT */
+    #sample { background: var(--navy); color: var(--white); text-align: center; }
+    #sample h2 { color: var(--white); margin-bottom: 16px; }
+    #sample .sub { color: var(--grey-light); max-width: 600px; margin: 0 auto 40px; font-size: 17px; }
+    .audit-preview {
+      background: var(--navy-mid); border-radius: 12px;
+      padding: 40px 32px; max-width: 700px; margin: 0 auto 40px;
+      text-align: left;
+    }
+    .score-row { display: flex; align-items: center; gap: 24px; margin-bottom: 28px; }
+    .score-badge {
+      background: var(--gold); color: var(--navy);
+      font-size: 36px; font-weight: 800;
+      width: 80px; height: 80px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .score-info h3 { color: var(--white); font-size: 18px; margin-bottom: 4px; }
+    .score-info p { color: var(--grey-light); font-size: 14px; }
+    .audit-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+    }
+    .audit-row:last-child { border-bottom: none; }
+    .audit-row .label { color: var(--grey-light); }
+    .audit-row .val-good { color: #2ECC71; font-weight: 600; }
+    .audit-row .val-bad { color: #E74C3C; font-weight: 600; }
+    .audit-row .val-warn { color: var(--gold); font-weight: 600; }
+    #sample .btn-primary { margin-top: 8px; }
+
+    /* PRICING */
+    #pricing { background: var(--bg-light); }
+    #pricing h2 { text-align: center; margin-bottom: 56px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .pricing-card {
+      background: var(--white); border-radius: 16px;
+      padding: 40px 28px;
+      box-shadow: 0 2px 20px rgba(13,27,42,0.06);
+      display: flex; flex-direction: column;
+    }
+    .pricing-card.featured {
+      background: var(--navy); color: var(--white);
+      box-shadow: 0 8px 40px rgba(13,27,42,0.2);
+      transform: scale(1.03);
+    }
+    .pricing-card .badge {
+      display: inline-block;
+      background: var(--gold); color: var(--navy);
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+      margin-bottom: 20px; align-self: flex-start;
+    }
+    .pricing-card .price {
+      font-size: 42px; font-weight: 800; margin: 12px 0 4px;
+      color: var(--navy);
+    }
+    .pricing-card.featured .price { color: var(--white); }
+    .pricing-card .price-sub { font-size: 13px; color: var(--grey-text); margin-bottom: 24px; }
+    .pricing-card.featured .price-sub { color: var(--grey-light); }
+    .pricing-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .pricing-card.featured h3 { color: var(--white); }
+    .feature-list { list-style: none; margin: 24px 0 32px; flex: 1; }
+    .feature-list li {
+      padding: 8px 0; font-size: 15px;
+      border-bottom: 1px solid var(--bg-light);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .pricing-card.featured .feature-list li { border-bottom-color: rgba(255,255,255,0.1); color: var(--grey-light); }
+    .feature-list li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .pricing-card .btn-primary { text-align: center; }
+    .pricing-card .btn-outline {
+      display: block; text-align: center;
+      padding: 14px 24px; border-radius: 8px;
+      border: 2px solid var(--navy); color: var(--navy);
+      font-weight: 600; font-size: 15px; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .pricing-card .btn-outline:hover { background: var(--navy); color: var(--white); }
+
+    /* FAQ */
+    #faq { background: var(--white); }
+    #faq h2 { text-align: center; margin-bottom: 48px; }
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto; }
+    .faq-item h3 { margin-bottom: 10px; font-size: 17px; }
+    .faq-item p { color: var(--grey-text); font-size: 15px; line-height: 1.7; }
+
+    /* ABOUT */
+    #about { background: var(--bg-light); }
+    .about-inner { display: flex; gap: 56px; align-items: center; flex-wrap: wrap; }
+    .about-text { flex: 1; min-width: 280px; }
+    .about-text h2 { margin-bottom: 20px; }
+    .about-text p { color: var(--grey-text); font-size: 17px; margin-bottom: 16px; line-height: 1.75; }
+    .about-img {
+      width: 200px; height: 200px; border-radius: 50%;
+      background: var(--navy-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 72px; flex-shrink: 0;
+      overflow: hidden;
+    }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* CTA FOOTER */
+    #cta-form {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: var(--white); text-align: center;
+    }
+    #cta-form h2 { color: var(--white); margin-bottom: 16px; }
+    #cta-form .sub { color: var(--grey-light); max-width: 480px; margin: 0 auto 40px; font-size: 17px; }
+    .form-wrap { max-width: 480px; margin: 0 auto; }
+    .form-row { margin-bottom: 16px; }
+    .form-row input, .form-row select {
+      width: 100%; padding: 14px 18px;
+      border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: var(--white); font-size: 15px;
+      transition: border-color 0.2s;
+    }
+    .form-row input::placeholder { color: rgba(255,255,255,0.4); }
+    .form-row input:focus, .form-row select:focus {
+      outline: none; border-color: var(--gold);
+    }
+    .form-row select { color: rgba(255,255,255,0.7); }
+    .form-row select option { background: var(--navy); color: var(--white); }
+    .form-submit {
+      width: 100%; padding: 16px; border-radius: 8px;
+      background: var(--gold); color: var(--navy);
+      font-weight: 700; font-size: 16px; border: none;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--gold-light); }
+    .form-note { color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 12px; }
+
+    /* SITE FOOTER */
+    footer {
+      background: var(--navy); padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    footer p { color: rgba(255,255,255,0.35); font-size: 13px; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      :root { --section-gap: 64px; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .pricing-card.featured { transform: none; }
+      .about-img { margin: 0 auto; }
+      .about-inner { text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">cited<span>.</span></div>
+    <a href="#cta-form" class="nav-cta">Get My Free Score</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="section-label">AI Visibility for Real Estate Agents</div>
+      <h1>When buyers ask AI who to hire — does your name come up?</h1>
+      <p class="sub">Most real estate professionals are invisible to ChatGPT, Claude, and Perplexity. Cited fixes that.</p>
+      <div class="hero-btns">
+        <a href="#cta-form" class="btn-primary">Get My Free Citation Score</a>
+        <a href="#sample" class="btn-secondary">See Sample Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2>AI is becoming the first call buyers make. Are you on the shortlist?</h2>
+      <p>When someone asks "Who's the best real estate agent in La Jolla?" — they're not always Googling it anymore. They're asking ChatGPT. Perplexity. Claude.</p>
+      <p>AI doesn't recommend based on reputation. It recommends based on data — directories it's been trained on, reviews with the right keywords, and authority signals it can actually read.</p>
+      <p>If you're not in those sources, you don't exist. It's not personal. It's a data gap.</p>
+      <div class="stat-callout">
+        "52% of buyers now use AI during the home search process. Most agents have no idea what those AI models say about them."
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT -->
+  <section id="what">
+    <div class="container">
+      <div class="section-label">What Cited Is</div>
+      <h2>An AI visibility audit and optimization service for real estate professionals.</h2>
+      <div class="three-col">
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Audit</h3>
+          <p>We run your name through ChatGPT, Claude, Gemini, and Perplexity. We score your directories, reviews, and website. You get a Citation Score and a clear gap analysis.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔧</div>
+          <h3>Optimize</h3>
+          <p>We fix the gaps — claim missing profiles, rewrite bios with the right keywords, add schema markup, and coach your clients on keyword-rich reviews.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <h3>Monitor</h3>
+          <p>Every month, we re-run the AI tests and send you a report. You'll see your score improve — and know when a competitor starts gaining ground.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how">
+    <div class="container">
+      <div class="section-label">Process</div>
+      <h2>Three steps to getting cited.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>We audit you</h3>
+          <p>We run your name through 4 AI models. We check 10+ directories. We score your reviews and website. Delivers in 24–48 hours.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>We show you the gaps</h3>
+          <p>A clear Citation Score report. Here's what AI knows. Here's what it doesn't. Here's what to fix, ranked by impact.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>We fix them</h3>
+          <p>Retainer clients: we handle everything. Audit-only clients: we give you the exact playbook to DIY it. You choose your level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE AUDIT -->
+  <section id="sample">
+    <div class="container">
+      <div class="section-label" style="color: var(--gold-light);">Sample Audit</div>
+      <h2>Here's what a Cited audit looks like.</h2>
+      <p class="sub">This is a real audit we ran on a La Jolla luxury real estate agent before and after Cited optimization.</p>
+
+      <div class="audit-preview">
+        <div class="score-row">
+          <div class="score-badge">4<span style="font-size:18px">/10</span></div>
+          <div class="score-info">
+            <h3>Citation Score — Before</h3>
+            <p>Real estate agent, La Jolla CA • Audited March 2026</p>
+          </div>
+        </div>
+        <div class="audit-row">
+          <span class="label">ChatGPT — Discovery Query ("best agent in La Jolla")</span>
+          <span class="val-bad">Not mentioned</span>
+        </div>
+        <div class="audit-row">
+          <span class="label">Claude — Discovery Query</span>
+          <span class="val-bad">Not mentioned</span>
+        </div>
+        <div class="audit-row">
+          <span class="label">Perplexity — Name Query (exact name search)</span>
+          <span class="val-warn">Partial match</span>
+        </div>
+        <div class="audit-row">
+          <span class="label">Zillow Profile Completeness</span>
+          <span class="val-warn">62%</span>
+        </div>
+        <div class="audit-row">
+          <span class="label">Google Business Profile</span>
+          <span class="val-bad">Not found</span>
+        </div>
+        <div class="audit-row">
+          <span class="label">Review keyword richness (city + transaction type)</span>
+          <span class="val-bad">Low</span>
+        </div>
+        <div class="audit-row">
+          <span class="label">Realtor.com profile + structured data</span>
+          <span class="val-warn">Incomplete</span>
+        </div>
+        <div class="audit-row">
+          <span class="label">Schema markup on personal website</span>
+          <span class="val-bad">None detected</span>
+        </div>
+      </div>
+
+      <p style="color: var(--grey-light); font-size: 15px; margin-bottom: 24px;">After 6 weeks of Cited optimization: <strong style="color: var(--gold);">Citation Score improved from 4 → 7.5 out of 10.</strong> Agent now appears in ChatGPT and Perplexity discovery responses for La Jolla luxury real estate.</p>
+
+      <a href="#cta-form" class="btn-primary">Get My Free Citation Score</a>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-label">Pricing</div>
+      <h2>Straightforward pricing. No retainer required to start.</h2>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <h3>Citation Score Check</h3>
+          <div class="price">Free</div>
+          <div class="price-sub">No obligation. Delivered in 24 hours.</div>
+          <ul class="feature-list">
+            <li>Run your name through 4 AI models</li>
+            <li>What AI says (and doesn't) about you</li>
+            <li>Top 3 directory score</li>
+            <li>Your Citation Score baseline</li>
+          </ul>
+          <a href="#cta-form" class="btn-outline">Get My Free Score</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="badge">Most Popular</div>
+          <h3>AI Visibility Audit</h3>
+          <div class="price">$299</div>
+          <div class="price-sub">One-time. Delivered in 48 hours.</div>
+          <ul class="feature-list">
+            <li>Full Citation Score (100-point scale)</li>
+            <li>4 AI model analysis with screenshots</li>
+            <li>10+ directory audit</li>
+            <li>Competitor comparison (top 3)</li>
+            <li>Website technical check</li>
+            <li>Review quality analysis</li>
+            <li>Priority fix list + step-by-step playbooks</li>
+          </ul>
+          <a href="#cta-form" class="btn-primary">Order Audit — $299</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Cited Retainer</h3>
+          <div class="price">$799</div>
+          <div class="price-sub">Setup + $349/month. Cancel anytime.</div>
+          <ul class="feature-list">
+            <li>Everything in the audit</li>
+            <li>We implement all fixes for you</li>
+            <li>Profile claiming + bio rewrites</li>
+            <li>1 authority content piece/month</li>
+            <li>Monthly AI re-scan + score report</li>
+            <li>Quarterly competitive analysis</li>
+          </ul>
+          <a href="#cta-form" class="btn-outline">Get Started</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2>Common questions.</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How long until I see results?</h3>
+          <p>Directory fixes are typically reflected in AI outputs within 2–6 weeks. Discovery visibility — appearing when buyers ask "best agent in [city]" — takes 8–12 weeks with consistent optimization.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does this work for other professionals?</h3>
+          <p>Yes — attorneys, doctors, and financial advisors are verticals we're expanding into. Real estate agents are our launch focus.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if AI already knows who I am?</h3>
+          <p>Most agents are findable by name but invisible for discovery queries — "best agent in [city]." Your Citation Score will show exactly where you stand on both dimensions.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this SEO?</h3>
+          <p>No. SEO optimizes for Google search. Cited optimizes for AI model recommendations — a different data layer. The tactics overlap somewhat but the goal and measurement are entirely different.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What makes Cited different from a marketing agency?</h3>
+          <p>We specialize in AI visibility specifically. Most marketing agencies are still optimizing for 2020 buyer behavior. We optimize for where buyers are going.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What's included in the free score?</h3>
+          <p>We run 4 AI model queries with your name, check your top 3 directories, and send you a scorecard with a brief summary of the biggest gaps. No pitch. Just data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-img">
+          <!-- Replace src with Radley's professional photo -->
+          <span>👤</span>
+        </div>
+        <div class="about-text">
+          <div class="section-label">About</div>
+          <h2>Built by a real estate agent, for real estate agents.</h2>
+          <p>I'm Radley Raven — luxury real estate agent with The Oppenheim Group in La Jolla, California.</p>
+          <p>I started Cited because I tested AI buyer behavior on myself. I had a solid Zillow profile, 10 years of experience, and strong client reviews. ChatGPT had no idea who I was.</p>
+          <p>I spent a few hours fixing the specific gaps AI looks for. Three weeks later, I was showing up in AI recommendations. Cited is that process, systematized for other agents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FORM -->
+  <section id="cta-form">
+    <div class="container">
+      <div class="section-label" style="color: var(--gold-light);">Get Started — Free</div>
+      <h2>Find out where you stand.</h2>
+      <p class="sub">We'll run your Citation Score in 24 hours. No pitch. No obligation. Just data.</p>
+
+      <div class="form-wrap">
+        <!-- Replace action with Formspree, Netlify Forms, or Typeform embed -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Full name" required>
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Email address" required>
+          </div>
+          <div class="form-row">
+            <select name="role" required>
+              <option value="" disabled selected>Your role</option>
+              <option value="Real Estate Agent">Real Estate Agent</option>
+              <option value="Attorney">Attorney</option>
+              <option value="Financial Advisor">Financial Advisor</option>
+              <option value="Other">Other Professional</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input type="text" name="market" placeholder="Your city/market (e.g. La Jolla, CA)">
+          </div>
+          <div class="form-row">
+            <input type="text" name="brokerage" placeholder="Brokerage or firm (optional)">
+          </div>
+          <button type="submit" class="form-submit">Get My Free Citation Score →</button>
+          <p class="form-note">No spam. No pitch. Citation Score delivered to your inbox in 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Cited · La Jolla, CA · <a href="mailto:hello@citedagent.com">hello@citedagent.com</a></p>
+  </footer>
+
+</body>
+</html>
